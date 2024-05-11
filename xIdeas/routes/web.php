@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\XideaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TermsController;
 use Illuminate\Support\Facades\Route;
@@ -17,8 +18,10 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 |
 */
 
-Route::get('/', [DashboardController::class, 'index']);
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::get('/terms', [TermsController::class, 'index']);
+
+Route::post('/xideas', [XideaController::class, 'store'])->name('xideas.create');
 
 //Route::get('/', [ProfileController::class, 'index']);
