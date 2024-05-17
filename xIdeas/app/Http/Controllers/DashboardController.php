@@ -15,7 +15,7 @@ class DashboardController extends Controller
 
 
         return view('dashboard', [
-            'xidea' => xidea::orderBy('created_at', 'desc')->get()
+            'xidea' => xidea::orderBy('created_at', 'desc')->paginate(5)
         ]);
     }
 }

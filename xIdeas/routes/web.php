@@ -24,4 +24,8 @@ Route::get('/terms', [TermsController::class, 'index']);
 
 Route::post('/xideas', [XideaController::class, 'store'])->name('xideas.create');
 
+Route::delete('/xideas/{id}', [XideaController::class, 'destroy'])->name('xideas.destroy');
+
+
+
 //Route::get('/', [ProfileController::class, 'index']);

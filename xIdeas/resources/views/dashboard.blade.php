@@ -39,6 +39,7 @@
                 </div>
             </div>
             <div class="col-6">
+               
                 @include('submit.success_message')
 
                 @include('submit.submit_xideas')
@@ -52,6 +53,12 @@
                   @include('submit.idea_card')
 
                     @endforeach
+
+                    <div class="mt-3">
+
+                    {{ $xidea->links() }} {{-- pagination links --}}
+
+                    </div>
 
                 </div>
             </div>
