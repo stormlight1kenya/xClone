@@ -21,8 +21,8 @@ class XideaController extends Controller
           return redirect()->route('dashboard')->with('success', 'xidea created successfully!');
     
     }
-    public function destroy($id){
-        xidea:: where('id',$id)->firstorFail()->delete();
+    public function destroy(xidea $xidea){ //the variable xidea is the id of the xidea as is the same as the one in the route
+        $xidea->delete();
        
 
         return redirect()->route('dashboard')->with('success', 'xidea deleted successfully!');
